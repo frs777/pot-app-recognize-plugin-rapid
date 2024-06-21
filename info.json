@@ -1,5 +1,5 @@
 {
-  "id": "[plugin].com.pot-app.rapid",
+  "id": "plugin.com.pot-app.rapid",
   "plugin_type": "recognize",
   "icon": "icon.png",
   "display": "Rapid OCR",
