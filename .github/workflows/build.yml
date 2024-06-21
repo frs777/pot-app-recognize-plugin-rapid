@@ -3,16 +3,17 @@ on: push
 permissions: write-all
 
 jobs:
-  build-for-linux:
-    needs: check
+  build:
     strategy:
       fail-fast: false
       matrix:
-        target: [
+        target:
+          [
             x86_64-pc-windows-msvc,
             i686-pc-windows-msvc,
-            apple-darwin, 
-            aarch64-apple-darwin,x86_64-unknown-linux-gnu
+            apple-darwin,
+            aarch64-apple-darwin,
+            x86_64-unknown-linux-gnu,
           ]
     runs-on: ubuntu-latest
     steps:
