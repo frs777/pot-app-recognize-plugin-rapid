@@ -29,11 +29,12 @@ jobs:
       - name: Move
         if: matrix.target == 'x86_64-pc-windows-msvc' || matrix.target == 'i686-pc-windows-msvc'
         run: |
-          sudo mv ${{ matrix.target }}/RapidOcrOnnx.exe ./RapidOcrOnnx.exe
+          mv ${{ matrix.target }}/RapidOcrOnnx.exe ./RapidOcrOnnx.exe
       - name: Move
         if: matrix.target != 'x86_64-pc-windows-msvc' && matrix.target != 'i686-pc-windows-msvc'
         run: |
-          sudo mv ${{ matrix.target }}/RapidOcrOnnx ./RapidOcrOnnx
+          mv ${{ matrix.target }}/RapidOcrOnnx ./RapidOcrOnnx
+          chmod +x ./RapidOcrOnnx
       - uses: vimtor/action-zip@v1
         if: matrix.target == 'x86_64-pc-windows-msvc' || matrix.target == 'i686-pc-windows-msvc'
         with:
