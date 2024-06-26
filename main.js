@@ -2,6 +2,11 @@ async function recognize(_base64, lang, options) {
     const { utils } = options;
     const { run, cacheDir, osType, pluginDir } = utils;
     let exeName = osType === "Windows_NT" ? "RapidOcrOnnx.exe" : "RapidOcrOnnx";
+
+    if (osType !== "Windows_NT") {
+        let res = await run('chmod', ['+x', `${pluginDir}/${exeName}`]);
+    }
+    
     let result = await run(`${pluginDir}/${exeName}`, [
         "--models",
         "models",
