@@ -2,7 +2,7 @@
   "id": "plugin.com.pot-app.rapid",
   "plugin_type": "recognize",
   "icon": "icon.png",
-  "display": "Rapid OCR",
+  "display": "Rapid OCR - Rozpoznawanie",
   "homepage": "https://github.com/pot-app/pot-app-recognize-plugin-rapid",
   "needs": [],
   "language": {
@@ -14,6 +14,7 @@
     "ko": "korean",
     "ru": "cyrillic",
     "ar": "arabic",
-    "mn_cy": "cyrillic"
+    "mn_cy": "cyrillic",
+    "pl": "latin"
   }
 }
